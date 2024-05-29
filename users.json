@@ -1,0 +1,23 @@
+[
+  { "name": "Alice", "email": "alice@example.com", "role": "admin" },
+  { "name": "Bob", "email": "bob@example.com", "role": "utilisateur" },
+  { "name": "Charlie", "email": "charlie@example.com", "role": "admin" },
+  { "name": "David", "email": "david@example.com", "role": "utilisateur" },
+  { "name": "Eva", "email": "eva@example.com", "role": "admin" },
+  { "name": "Frank", "email": "frank@example.com", "role": "utilisateur" },
+  { "name": "Grace", "email": "grace@example.com", "role": "admin" },
+  { "name": "Hannah", "email": "hannah@example.com", "role": "utilisateur" },
+  { "name": "Isaac", "email": "isaac@example.com", "role": "admin" },
+  { "name": "Julia", "email": "julia@example.com", "role": "utilisateur" },
+  { "name": "Kevin", "email": "kevin@example.com", "role": "admin" },
+  { "name": "Lena", "email": "lena@example.com", "role": "utilisateur" },
+  { "name": "Michael", "email": "michael@example.com", "role": "admin" },
+  { "name": "Nina", "email": "nina@example.com", "role": "utilisateur" },
+  { "name": "Oliver", "email": "oliver@example.com", "role": "admin" },
+  { "name": "Paula", "email": "paula@example.com", "role": "utilisateur" },
+  { "name": "Quentin", "email": "quentin@example.com", "role": "admin" },
+  { "name": "Rachel", "email": "rachel@example.com", "role": "utilisateur" },
+  { "name": "Samuel", "email": "samuel@example.com", "role": "admin" },
+  { "name": "Tina", "email": "tina@example.com", "role": "utilisateur" },
+  { "name": "Jenifer", "email": "jenifer@example.com", "role": "utilisateur" }
+]
