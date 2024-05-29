@@ -26,7 +26,7 @@ const filterUsers = () => {
   }
 
   const start = (currentPage - 1) * perPage;
-  const end = Math.min(start + perPage, filteredUsers.length - 1);
+  const end = Math.min(start + perPage, filteredUsers.length);
   const nbrPages = Math.ceil(filteredUsers.length / perPage);
 
   filteredUsers = filteredUsers.slice(start, end);
@@ -103,13 +103,19 @@ app.innerHTML = `
     `;
 
 const renderPagination = (nbrPages) => {
-  let paginationHtml = `<li class="page-item"><button id="pagination-previous" class="page-link">Previous</button></li>`;
+  let paginationHtml = `<li class="page-item"><button id="pagination-previous" class="page-link ${
+    currentPage === 1 ? "disabled" : ""
+  }">Précédent</button></li>`;
 
   for (let i = 1; i <= nbrPages; i++) {
-    paginationHtml += `<li class="page-item"><button class="page-link">${i}</button></li>`;
+    paginationHtml += `<li class="page-item ${
+      i === currentPage ? "active" : ""
+    }" ><button class="page-link pagination-btn">${i}</button></li>`;
   }
 
-  paginationHtml += `<li class="page-item"><button id="pagination-next" class="page-link">Next</button></li>`;
+  paginationHtml += `<li class="page-item ${
+    currentPage === nbrPages ? "disabled" : ""
+  }"><button id="pagination-next" class="page-link">Suivant</button></li>`;
 
   document.querySelector("#pagination").innerHTML = paginationHtml;
 
@@ -124,6 +130,15 @@ const renderPagination = (nbrPages) => {
     currentPage = Math.min(currentPage + 1, nbrPages);
     filterUsers();
   });
+
+  const paginationBtns = document.querySelectorAll(".pagination-btn");
+  for (let index = 0; index < paginationBtns.length; index++) {
+    const btn = paginationBtns[index];
+    btn.addEventListener("click", () => {
+      currentPage = parseInt(btn.textContent);
+      filterUsers();
+    });
+  }
 };
 
 const searchInput = document.querySelector("#input-search");
